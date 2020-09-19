@@ -7,6 +7,7 @@ header{
     padding: 1.5rem 1rem;
     background-color: rgb(24, 23, 23);
     color: rgba(100, 98, 98, 0.884);
+    border-top: 4px solid #f50057;
   }
   .logo{
     text-align: center;
@@ -42,8 +43,11 @@ header{
   }
   
   
-  .nav__list li:hover , .active{
-    color: #be1616;
+  .nav__list li:hover{
+    color: #b40c47;
+  }
+  .active{
+    color: #f50057;
   }
   
   .nav__search{

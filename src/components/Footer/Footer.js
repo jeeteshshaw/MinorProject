@@ -1,13 +1,22 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Category from "./components/Category/Category"
-import Navbar from './components/Navbar/Navbar'
 import { Grid, makeStyles } from '@material-ui/core'
 import "./Footer.css"
+
+
+const useStyle = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    // background: "red"
+  },
+}))
+
 function Footer() {
-    return (
-        <div>
-            <footer>
+  const classes = useStyle()
+
+  return (
+    <div>
+      <footer>
         <Grid container justify="space-around" className={classes.root} spacing={2}>
           <Grid className="footer__box" item xs={4} md={2}>
             <ul className="footer__list">
@@ -51,8 +60,8 @@ function Footer() {
 
         </Grid>
       </footer>
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Footer

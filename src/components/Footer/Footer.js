@@ -1,5 +1,9 @@
 import React from 'react'
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Category from "./components/Category/Category"
+import Navbar from './components/Navbar/Navbar'
+import { Grid, makeStyles } from '@material-ui/core'
+import "./Footer.css"
 function Footer() {
     return (
         <div>

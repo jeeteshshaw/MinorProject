@@ -1,4 +1,5 @@
 import React,{ useRef } from 'react'
+import {NavLink} from 'react-router-dom'
 import { Grid, makeStyles, TextField, Button } from "@material-ui/core"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons'
@@ -60,16 +61,19 @@ function Navbar() {
           <Grid className="nav__box" item lg={7} md={7} sm={12}>
             <div className="nav__menu">
               <ul className="nav__list">
-                <li className="nav__option active">Home</li>
-                <li className="nav__option">Category
-                  {/* <ul className="sub__menu">
-                    <li className="sub__item">Action</li>
-                    <li className="sub__item">Horror</li>
-                    <li className="sub__item">Comedy</li>
-                  </ul> */}
+                <li>
+                  <NavLink exact to='/' className="nav__option" activeClassName = 'active'>Home</NavLink>
                 </li>
-                <li className="nav__option">Latest Movies</li>
-                <li className="nav__option">Sign up</li>
+                <li>
+                  <NavLink exact to='/category' className="nav__option" activeClassName = 'active'>Category</NavLink>
+                </li>
+                <li>
+                  <NavLink exact to='/latestmovies' className="nav__option" activeClassName = 'active'>Latest Movies</NavLink>
+                </li>
+                <li>
+                  <NavLink exact to='/user/signup' className="nav__option" activeClassName = 'active'>Signup</NavLink>
+                </li>
+                
               </ul>
             </div>
           </Grid>

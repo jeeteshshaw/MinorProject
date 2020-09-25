@@ -1,10 +1,11 @@
 import React, { } from 'react'
 import './App.css'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Category from "./components/Category/Category"
 import Navbar from './components/Navbar/Navbar'
-import { Grid, makeStyles } from '@material-ui/core'
 import Footer from './components/Footer/Footer'
+import Signup from './components/Signup/Signup'
+import Homepage from './components/Homepage/Homepage'
+import BgPoster from './login_bg.jpg'
 
 
 
@@ -14,9 +15,19 @@ function App() {
 
   return (
     <Router>
-      <div className="background"></div>
+      <div>
+        <img className="background" src={BgPoster} alt="background" />
+      </div>
+
       <Navbar />
-      <main></main>
+      <main>
+        {/* <Login /> */}
+
+        <Switch>
+          <Route path='/' exact component={Homepage} />
+          <Route path='/user/signup' component={Signup} />
+        </Switch>
+      </main>
       <Footer />
     </Router>
   );

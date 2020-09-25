@@ -1,9 +1,9 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { Grid, makeStyles } from '@material-ui/core'
 import "./Footer.css"
 
-
+// material ui stylesheet
 const useStyle = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -28,11 +28,11 @@ function Footer() {
             <div className="footer__menu">
               <ul className="footer__list">
                 <li>Explore</li>
-                <li>Home</li>
-                <li>Category</li>
-                <li>About</li>
-                <li>Support</li>
-                <li>Report</li>
+                <li><Link exact to='/' className='link'>Home</Link></li>
+                <li><Link exact to='/category' className='link'>Category</Link></li>
+                <li><Link exact to='/about' className='link'>About</Link></li>
+                <li><Link exact to='/support' className='link'>Support</Link></li>
+                <li><Link exact to='/report' className='link'>Report</Link></li>
               </ul>
             </div>
           </Grid>
@@ -41,10 +41,10 @@ function Footer() {
             <div className="footer__social">
               <ul className="footer__list">
                 <li>Follow</li>
-                <li>Instagram</li>
-                <li>Twitter</li>
-                <li>Facebook</li>
-                <li>Youtube</li>
+                <li><Link exact to='/insta' className='link'>Instagram</Link></li>
+                <li><Link exact to='/twitt' className='link'>Twitter</Link></li>
+                <li><Link exact to='/fb' className='link'>Facebook</Link></li>
+                <li><Link exact to='/Yt' className='link'>Youtube</Link></li>
               </ul>
             </div>
           </Grid>
@@ -52,8 +52,8 @@ function Footer() {
             <div className="footer__social" >
               <ul className="footer__list">
                 <li>Legal</li>
-                <li>Terms</li>
-                <li>Privacy</li>
+                <li><Link exact to='/terms' className='link'>Terms</Link></li>
+                <li><Link exact to='/privacy' className='link'>Privacy</Link></li>
               </ul>
             </div>
           </Grid>
